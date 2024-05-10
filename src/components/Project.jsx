@@ -13,10 +13,36 @@ import { Pagination, Autoplay, Navigation } from "swiper";
 
 const Project = () => {
   const projects = [
-    { name: "Movie App", img: project1, github_link: "", live_link: "" },
-    { name: "Job App", img: project2, github_link: "", live_link: "" },
-    { name: "Tourism App", img: project3, github_link: "", live_link: "" },
-    { name: "Dropdown App", img: project4, github_link: "", live_link: "" },
+    {
+      name: "MERN Book Store",
+      img: project1,
+      github_link: "https://github.com/shriwa/MERN-book-store-app",
+      live_link: "",
+    },
+    {
+      name: "MERN E-Commerce",
+      img: project2,
+      github_link: "https://github.com/shriwa/MERN-e-commerce",
+      live_link: "",
+    },
+    {
+      name: "Tourism App",
+      img: project3,
+      github_link: "https://github.com/shriwa/Tourism-Website",
+      live_link: "",
+    },
+    {
+      name: "Dental App",
+      img: project4,
+      github_link: "https://github.com/shriwa/Dental-Website",
+      live_link: "",
+    },
+    {
+      name: "Personal Portfolio",
+      img: project4,
+      github_link: "https://github.com/shriwa/portfolio",
+      live_link: "",
+    },
   ];
 
   return (
@@ -38,7 +64,7 @@ const Project = () => {
               },
             }}
             loop={true}
-            autoplay={{ delay: 3000 }}
+            autoplay={{ delay: 7000 }}
             pagination={{
               clickable: true,
             }}

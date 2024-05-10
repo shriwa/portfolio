@@ -4,7 +4,10 @@ const Contact = () => {
   const contact_info = [
     { logo: "mail", text: "shriwarthan59@gmail.com" },
     { logo: "logo-whatsapp", text: "+94 076 7722381" },
-    { logo: "location", text: "Location" },
+    {
+      logo: "location",
+      text: " No 68, Ambagamuva Rd, Gampola, Kandy, Sri Lanka",
+    },
   ];
 
   return (
@@ -26,14 +29,14 @@ const Contact = () => {
             ></textarea>
             <button className="btn-primary w-fit">Send Message</button>
           </form>
-          <div className=" flex flex-col gap-8">
+          <div className=" flex flex-col gap-8 ">
             {contact_info?.map((contact, i) => {
               return (
                 <div key={i} className=" flex gap-4 w-fit items-center">
                   <div className=" min-w-[3rem] min-h-[3rem] text-2xl flex items-center justify-center text-white  bg-cyan-600 rounded-full">
                     <ion-icon name={contact.logo}></ion-icon>
                   </div>
-                  <p className=" text-lg">{contact.text}</p>
+                  <p className=" text-md">{contact.text}</p>
                 </div>
               );
             })}
