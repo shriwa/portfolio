@@ -21,11 +21,11 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full left-0 top-0 z-[999] ${
-        sticky ? "bg-white/80  text-gray-900" : "text-white"
+      className={`fixed w-full left-0 top-0 z-[999] bg-white/80 ${
+        sticky ? "bg-white/80 text-gray-900 duration-500" : "text-black"
       }`}
     >
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between ">
         <div className="mx-7">
           <h4 className="text-4xl uppercase font-bold">
             Shri <span className=" text-cyan-600">warthan</span>
@@ -49,13 +49,13 @@ const Navbar = () => {
         <div
           onClick={() => setOpen(!open)}
           className={`z-[999] cursor-pointer ${
-            open ? "text-gray-900 " : " text-gray-100"
+            open ? "text-gray-900" : " text-gray-900"
           } text-3xl md:hidden m-5`}
         >
           <ion-icon name="menu"></ion-icon>
         </div>
         <div
-          className={`md:hidden text-gray-900 absolute w-1/3 h-screen px-7 font-bold bg-white top-0 right-0 duration-300 ${
+          className={`md:hidden text-gray-900 absolute w-1.5/3 h-screen px-7 font-bold bg-white/90 top-0 right-0 duration-500 ${
             open ? "right-0" : "right-[-100%]"
           }`}
         >

@@ -1,109 +1,115 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+// import required modules
+import { Pagination, Navigation } from "swiper";
 
 const Skills = () => {
   const skills = [
     {
-      logo: "logo-html5",
+      logo: "devicon-html5-plain",
       name: "HTML",
       type: "Web Development",
     },
     {
-      logo: "logo-css3",
+      logo: "programming lang-css",
       name: "CSS",
       type: "Web Development",
     },
     {
-      logo: "logo-tailwind",
+      logo: "devicon-tailwindcss-original",
       name: "Tailwind",
       type: "Web Development",
     },
     {
-      logo: "logo-bootstrap",
+      logo: "devicon-bootstrap-plain",
       name: "Bootstrap",
       type: "Web Development",
     },
     {
-      logo: "logo-javascript",
+      logo: "devicon-javascript-plain",
       name: "JavaScript",
       type: "Web Development",
     },
     {
-      logo: "logo-nodejs",
+      logo: "devicon-nodejs-plain-wordmark",
       name: "Node JS",
       type: "Web Development",
     },
     {
-      logo: "logo-react",
+      logo: "devicon-react-original",
       name: "React JS",
       type: "Web Development",
     },
     {
-      logo: "logo-java",
+      logo: "devicon-java-plain",
       name: "Java",
       type: "Programming Language",
     },
     {
-      logo: "logo-python",
+      logo: "devicon-python-plain",
       name: "Python",
       type: "Programming Language",
     },
     {
-      logo: "logo-csharp",
+      logo: "devicon-csharp-plain",
       name: "C#",
       type: "Programming Language",
     },
     {
-      logo: "logo-r",
+      logo: "devicon-r-plain",
       name: "R",
       type: "Programming Language",
     },
     {
-      logo: "logo-php",
+      logo: "devicon-php-plain",
       name: "PHP",
       type: "Web Development",
     },
     {
-      logo: "logo-react",
+      logo: "devicon-dot-net-plain",
       name: "ASP.NET",
       type: "Web Development",
     },
     {
-      logo: "logo-react",
-      name: "REST API",
-      type: "Web Development",
-    },
-    {
-      logo: "logo-react",
+      logo: "devicon-react-original",
       name: "React Native",
       type: "Mobile Development",
     },
     {
-      logo: "logo-react",
+      logo: "devicon-android-plain",
       name: "Android (Java)",
       type: "Mobile Development",
     },
     {
-      logo: "logo-sql",
+      logo: "devicon-azuresqldatabase-plain",
       name: "SQL",
       type: "Database",
     },
     {
-      logo: "logo-mongodb",
+      logo: "devicon-mongodb-plain",
       name: "MongoDB",
       type: "Database",
     },
     {
-      logo: "logo-microsoftsqlserver",
+      logo: "devicon-microsoftsqlserver-plain",
       name: "MS SQL Server",
       type: "Database",
     },
     {
-      logo: "logo-oracle",
+      logo: "devicon-oracle-original",
       name: "Oracle",
       type: "Database",
     },
     {
-      logo: "logo-github",
+      logo: "devicon-github-original",
       name: "Git & GitHub",
       type: "Version Control",
     },
@@ -125,26 +131,37 @@ const Skills = () => {
           My <span className="text-cyan-600">Skills</span>
         </h3>
 
-        {Object.entries(groupedSkills).map(([category, skills]) => (
-          <div key={category} className="skills-container">
-            <h2 className="text-2xl font-semibold mt-6 ">
-              <span>{category}</span>
-            </h2>
-            <div className="flex items-center justify-center mt-12 mb-20 gap-5 flex-wrap">
-              {skills.map((skill, i) => (
-                <div
-                  key={i}
-                  className="border-2 border-cyan-600 relative min-w-[12rem] max-w-[16rem] bg-gray-900 p-10 rounded-3xl"
-                >
-                  <div className="text-6xl w-15 h-15 bg-gray-900 rounded-full flex items-center justify-center hover:text-cyan-600">
-                    <ion-icon name={skill.logo}></ion-icon>
-                  </div>
-                  <p className="text-xl mt-3">{skill.name}</p>
+        <Swiper
+          pagination={{
+            type: "fraction",
+          }}
+          navigation={true}
+          modules={[Pagination, Navigation]}
+          className="mySwiper"
+        >
+          {Object.entries(groupedSkills).map(([category, skills], index) => (
+            <SwiperSlide key={index}>
+              <div className="skills-container">
+                <h2 className="text-2xl font-semibold mt-6 ">
+                  <span>{category}</span>
+                </h2>
+                <div className="flex items-center justify-center mt-12 mb-20 gap-5 flex-wrap">
+                  {skills.map((skill, i) => (
+                    <div
+                      key={i}
+                      className="border-2 border-cyan-600 relative w-20 h-20 bg-gray-900 p-14 rounded-3xl flex flex-col items-center justify-center hover:text-cyan-600"
+                    >
+                      <i className={skill.logo} style={{ fontSize: 30 }}></i>
+                      <div className="text-6xl w-20 h-20 bg-gray-900 rounded-full flex items-center justify-center">
+                        <p className=" text-sm mt-3">{skill.name}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-          </div>
-        ))}
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   );

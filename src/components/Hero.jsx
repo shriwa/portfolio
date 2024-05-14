@@ -37,7 +37,9 @@ const Hero = () => {
             Undergraduate;
           </h4>
           <a href="#contact">
-            <button className=" btn-primary mt-5">Contact Me</button>
+            <button className=" btn-primary mt-5 duration-300">
+              Contact Me
+            </button>
           </a>
           <div className=" mt-8 text-3xl flex items-center justify-center md:justify-start gap-3">
             {social_media?.map((icon) => (
