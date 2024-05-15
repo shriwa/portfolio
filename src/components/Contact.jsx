@@ -98,7 +98,7 @@ const Contact = () => {
                 placeholder={
                   !isMessageValid ? "Message is required" : "Your Message"
                 }
-                rows={8}
+                rows={7}
                 className={!isMessageValid ? "border-red-500  bg-red-900" : ""}
               />
               <input type="submit" className="btn-primary w-fit" />
