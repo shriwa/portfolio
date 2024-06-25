@@ -3,6 +3,7 @@ import project1 from "../assets/images/book_store.jpg";
 import project2 from "../assets/images/e_commerce.jpg";
 import project3 from "../assets/images/tourism_site.jpg";
 import project4 from "../assets/images/dental_app.jpg";
+import project5 from "../assets/images/crud_todo.jpg";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -35,6 +36,12 @@ const Project = () => {
       name: "Dental App",
       img: project4,
       github_link: "https://github.com/shriwa/Dental-Website",
+      live_link: "",
+    },
+    {
+      name: "MERN Todo App",
+      img: project5,
+      github_link: "https://github.com/shriwa/CRUD_TODO_App",
       live_link: "",
     },
   ];
