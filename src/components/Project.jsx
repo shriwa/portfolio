@@ -18,19 +18,19 @@ const Project = () => {
       name: "MERN Book Store",
       img: project1,
       github_link: "https://github.com/shriwa/MERN-book-store-app",
-      live_link: "",
+      live_link: "https://book-store-app-mern.netlify.app/",
     },
     {
       name: "MERN E-Commerce",
       img: project2,
-      github_link: "https://github.com/shriwa/MERN-e-commerce",
+      github_link: "https://github.com/shriwa/Mern_E-Commerce",
       live_link: "",
     },
     {
       name: "Tourism App",
       img: project3,
       github_link: "https://github.com/shriwa/Tourism-Website",
-      live_link: "",
+      live_link: "https://shriwa.github.io/Tourism-Website/",
     },
     {
       name: "Dental App",
@@ -92,13 +92,13 @@ const Project = () => {
                       >
                         GitHub
                       </a>
-                      {/* <a
+                      <a
                         href={project.live_link}
                         target="_blank"
                         className=" text-cyan-600 bg-gray-800 px-2 py-1 rounded inline-block"
                       >
                         Live demo
-                      </a> */}
+                      </a>
                     </div>
                   </div>
                 </SwiperSlide>
