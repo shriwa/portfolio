@@ -24,7 +24,6 @@ const Project = () => {
       name: "MERN E-Commerce",
       img: project2,
       github_link: "https://github.com/shriwa/Mern_E-Commerce",
-      live_link: "",
     },
     {
       name: "Tourism App",
@@ -36,13 +35,11 @@ const Project = () => {
       name: "Dental App",
       img: project4,
       github_link: "https://github.com/shriwa/Dental-Website",
-      live_link: "",
     },
     {
       name: "MERN Todo App",
       img: project5,
       github_link: "https://github.com/shriwa/CRUD_TODO_App",
-      live_link: "",
     },
   ];
 

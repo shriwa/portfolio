@@ -32,7 +32,7 @@ const About = () => {
               <br />
               <br />
               <a
-                href="https://drive.google.com/uc?export=download&id=159UTUQVjnShnzKAzNofvlxUpSJfPf-HW"
+                href="https://drive.google.com/uc?export=download&id=1riSWQeRzdbUDKH_ZAi2IsGK8MEd6k8V_"
                 download
               >
                 <button className="btn-primary">Download CV</button>
