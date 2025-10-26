@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import hero from "../assets/images/me1.png";
+import "aos/dist/aos.css";
+import Aos from "aos";
 
 const Hero = () => {
+  useEffect(() => {
+    Aos.init();
+  });
+
   const social_media = [
     { logo: "mail", link: "mailto:shriwarthan59@gmail.com" },
     { logo: "logo-instagram", link: "https://www.instagram.com/_shriwa_/" },
@@ -23,10 +29,16 @@ const Hero = () => {
           src={hero}
           alt=""
           className="md:w-7/12 h-full object-cover rounded-3xl"
+          data-aos="fade-right"
+          data-aos-duration="1000"
         />
       </div>
       <div className="flex-1 ">
-        <div className=" md:text-left text-center">
+        <div
+          className=" md:text-left text-center"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
           <h1 className=" md:text-4xl text-2xl md:leading-normal leading-10 text-white font-bold">
             <span className=" text-cyan-600 md:text-4xl text-3xl animate-pulse">
               Hello World ;

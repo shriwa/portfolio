@@ -1,7 +1,12 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import "aos/dist/aos.css";
+import Aos from "aos";
 
 const Contact = () => {
+  useEffect(() => {
+    Aos.init();
+  });
   const contact_info = [
     { logo: "mail", text: "shriwarthan59@gmail.com" },
     { logo: "logo-whatsapp", text: "+94 076 7722381" },
@@ -68,7 +73,12 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-10 px-3 text-white">
+    <section
+      id="contact"
+      className="py-10 px-3 text-white"
+      data-aos="fade-right"
+      data-aos-duration="500"
+    >
       <div className="text-center mt-8">
         <h3 className="text-4xl font-semibold">
           Contact <span className="text-cyan-600">Me</span>

@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from "react";
+import "aos/dist/aos.css";
+import Aos from "aos";
 
 const Navbar = () => {
+  useEffect(() => {
+    Aos.init();
+  });
   const [sticky, setSticky] = useState(false);
   const [open, setOpen] = useState(false);
 
   const menuLinks = [
     { name: "HOME", link: "#home" },
     { name: "ABOUT", link: "#about" },
+    { name: "EXPERIENCE", link: "#experience" },
     { name: "SKILLS", link: "#skills" },
     { name: "PROJECTS", link: "#projects" },
     { name: "CONTACT", link: "#contact" },
@@ -24,6 +30,8 @@ const Navbar = () => {
       className={`fixed w-full left-0 top-0 z-[999] bg-white/80 ${
         sticky ? "bg-white/80 text-gray-900 duration-500" : "text-black"
       }`}
+      data-aos="fade-down"
+      data-aos-duration="500"
     >
       <div className="flex items-center justify-between ">
         <div className="mx-7">
